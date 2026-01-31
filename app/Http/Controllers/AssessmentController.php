@@ -15,8 +15,6 @@ class AssessmentController extends Controller
         $criteria_filtered = Criteria::orderBy('criteria_code','Asc')->has('assessment')->with('sub_criteria')->get();
         $employes = Employe::orderBy('id','Asc')->with('assessment')->get(); 
         $arr = Assessment::dss_saw();
-        // return $arr;
-        // return Assessment::getMaxMin($criterias);
         return view('dashboard.admin.assessment.index',compact('criterias','employes','arr','criteria_filtered'));
         
     }
@@ -28,7 +26,6 @@ class AssessmentController extends Controller
     }
 
     public function store(Request $request){
-        // return $request->all();
         request()->validate([
             'criteria_id'=>['required'],
             'weight'=>['required']
@@ -44,7 +41,6 @@ class AssessmentController extends Controller
                 'weight'=>$request['weight'][$index]
             ];
         }
-        // return $arr;
         foreach($arr as $data){
             try {
                 Assessment::updateOrCreate([
@@ -54,7 +50,6 @@ class AssessmentController extends Controller
                 'weight'=>$data['weight']
                 ]);
             } catch (\Throwable $th) {
-                // return $th;
                 return redirect()->route('assessment')->withErrors('Error');
             }
         }

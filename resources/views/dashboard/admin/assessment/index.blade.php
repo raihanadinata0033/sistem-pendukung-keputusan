@@ -4,7 +4,7 @@
 <div class="d-sm-flex align-items-center justify-content-between mb-4">
     <h1 class="h3 mb-0 text-gray-800">Assessment</h1>
 
-    <a href="{{route('assesment.export')}}" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm">
+    <a href="{{route('assessment.export')}}" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm">
         <i class="fas fa-download fa-sm text-white-50"></i> SAW Rank
     </a>
 </div>
@@ -28,7 +28,7 @@
         <div class="tab-content shadow-sm">
 
             <div id="home" class="tab-pane active">
-                @include('dashboard.admin.assesment.create')
+                @include('dashboard.admin.assessment.create')
             </div>
 
             <div id="menu1" class="tab-pane fade">

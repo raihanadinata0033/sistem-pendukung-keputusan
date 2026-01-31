@@ -6,7 +6,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class Assessment extends Model
 {
-    //
     protected $guarded = [];
     
     public static function getMaxMin($criterias){
@@ -48,7 +47,6 @@ class Assessment extends Model
                     }
                 }
             }
-            // dd($score);
             $arr[$index]['score']=array_sum($score[$index]);
         }
         foreach ($arr as $key => $row)

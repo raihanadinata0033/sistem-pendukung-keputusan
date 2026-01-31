@@ -4,13 +4,13 @@
 <div class="card border-0 mb-4 mt-2">
     <div class="card-header font-weight-bold text-primary">
         List Assessment
-        <a href="{{ route('employe.creat') }}" class="btn btn-sm float-right">
+        <a href="{{ route('employe.create') }}" class="btn btn-sm float-right">
             <i class="fas fa-plus-square"></i> New Employe
         </a>
     </div>
 
     <div class="card-body">
-        <form action="{{ route('employe.stroe') }}" method="POST">
+        <form action="{{ route('employe.store') }}" method="POST">
             @csrf
 
             <div class="form-group">

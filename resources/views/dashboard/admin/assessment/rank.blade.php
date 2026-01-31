@@ -12,7 +12,7 @@
                         <th>Rank.</th>
                         <th>Employe Name</th>
 
-                        @foreach ($criterias_filtered as $criteria)
+                        @foreach ($criteria_filtered as $criteria)
                             <th>
                                 {{ $criteria->criteria_code }}<br>
                                 ({{ $criteria->nama }})
@@ -30,7 +30,7 @@
                         </tr>
                     @endif
 
-                    @foreach ($arrs as $index => $result)
+                    @foreach ($arr as $index => $result)
 
                         @php
                             if($result['type'] = 'benefit'){

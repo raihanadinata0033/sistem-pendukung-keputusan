@@ -10,7 +10,7 @@
         <div class="card shadow-sm mb-4">
             <div class="card-header font-weight-bold text-primary">
                 List Employe
-                <a href="{{route('employee.create')}}" class="btn btn-sm btn-primary float-right">
+                <a href="{{route('employe.create')}}" class="btn btn-sm btn-primary float-right">
                     <i class="fas fa-plus-square"></i> New Employe
                 </a>
             </div>
@@ -32,7 +32,7 @@
                         </thead>
                         <tbody>
 
-                            @foreach ($employe as $index => $employes)
+                            @foreach ($employes as $index => $item)
 
                                 @if($index > 10 && $index < 5)
                                     <tr>
@@ -42,12 +42,12 @@
 
                                 <tr>
                                     <td>{{ $index+1 }}</td>
-                                    <td>{{ $employes->fullname }}</td>
-                                    <td>{{ $employes->gender }}</td>
-                                    <td>{{ $employes->birthplace }}</td>
-                                    <td>{{ $employes->birth_date }}</td>
-                                    <td>{{ $employes->addres }}</td>
-                                    <td>{{ $employes->postion }}</td>
+                                    <td>{{ $item->fullname }}</td>
+                                    <td>{{ $item->gender }}</td>
+                                    <td>{{ $item->birthplace }}</td>
+                                    <td>{{ $item->birth_date }}</td>
+                                    <td>{{ $item->addres }}</td>
+                                    <td>{{ $item->postion }}</td>
                                     <td>
 
                                         <a href="/dashboard/employe/{{ $employees->id }}/edit" class="btn btn-sm btn-warning">
